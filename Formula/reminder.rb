@@ -5,21 +5,21 @@
 class Reminder < Formula
   desc "Terminal-based interactive app for organising tasks with minimal efforts."
   homepage "https://github.com/goyalmunish/reminder"
-  version "1.9.14"
+  version "1.9.15"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.14/reminder_1.9.14_darwin_amd64.tar.gz"
-      sha256 "884adc0d17e28fe3a072416e1d9464b244ac44fac9c6a4036dfe429129e7ec91"
+    if Hardware::CPU.arm?
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.15/reminder_1.9.15_darwin_arm64.tar.gz"
+      sha256 "0ccd1f8157902beef233167519d401904e9f92da68a82d70da83c5078d052fa8"
 
       def install
         bin.install "reminder"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.14/reminder_1.9.14_darwin_arm64.tar.gz"
-      sha256 "bdc01b112a46c6b11e5b28cb5811c246077bb8d11c278232f2a42e19a7e35412"
+    if Hardware::CPU.intel?
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.15/reminder_1.9.15_darwin_amd64.tar.gz"
+      sha256 "402f9c21b7275a59d030d5a4e78e042e710eb17763525d2674501b3c60b2d622"
 
       def install
         bin.install "reminder"
@@ -29,16 +29,16 @@ class Reminder < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.14/reminder_1.9.14_linux_arm64.tar.gz"
-      sha256 "15554f9995efe20a0ca46e3aac1ef7331311cde53c288e489ab82de1caead5a3"
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.15/reminder_1.9.15_linux_arm64.tar.gz"
+      sha256 "2bacb340d4498c58526c4f760dcf401845e76859821ec7a57724f71fab0dd200"
 
       def install
         bin.install "reminder"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.14/reminder_1.9.14_linux_amd64.tar.gz"
-      sha256 "423555d4bb87b080d22d623ebccc0f84c65c40bf4c6fe7ef96ead6256e3d5d97"
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.15/reminder_1.9.15_linux_amd64.tar.gz"
+      sha256 "78629b7e7d02bd2dc8d4eafdadf9ee8ddd173b5fa3f9de3004f6ba0d1a9c3c2c"
 
       def install
         bin.install "reminder"
