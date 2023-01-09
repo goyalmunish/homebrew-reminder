@@ -5,21 +5,21 @@
 class Reminder < Formula
   desc "Terminal-based interactive app for organising tasks with minimal efforts."
   homepage "https://github.com/goyalmunish/reminder"
-  version "1.9.25"
+  version "1.9.26"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.25/reminder_1.9.25_darwin_arm64.tar.gz"
-      sha256 "5aa4cd380b08ff7d3c5615e04b086a60a1131159bacf188787d0a7985d119d60"
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.26/reminder_1.9.26_darwin_arm64.tar.gz"
+      sha256 "0b2fb77c70ff14adf0cb5045c33e4d664d194366f630bbfcaa6af8bc487a70b4"
 
       def install
         bin.install "reminder"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.25/reminder_1.9.25_darwin_amd64.tar.gz"
-      sha256 "385c96f289b14786302871f0b94dab8c6c0ca54924d1379ea53d2545bac1705e"
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.26/reminder_1.9.26_darwin_amd64.tar.gz"
+      sha256 "d10de348d9a080b10caaa3ae840368957440434ccac384413bf09794599e747b"
 
       def install
         bin.install "reminder"
@@ -28,17 +28,17 @@ class Reminder < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.25/reminder_1.9.25_linux_arm64.tar.gz"
-      sha256 "f61da42e6073ae8a4d7edcf8a28251aec5b5f8fd95533c5042b8040821d8711b"
+    if Hardware::CPU.intel?
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.26/reminder_1.9.26_linux_amd64.tar.gz"
+      sha256 "38a8c8589d4fab512894d103bfdc03dca2c6a4de1297f4278fac2effb23d279f"
 
       def install
         bin.install "reminder"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.25/reminder_1.9.25_linux_amd64.tar.gz"
-      sha256 "e14dfae63aa23e27493d5c2a955e470b934b963377cfe636113de95749970ea2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goyalmunish/reminder/releases/download/v1.9.26/reminder_1.9.26_linux_arm64.tar.gz"
+      sha256 "a0c9b1f807136dda931eee5a152bd1ddae6af35b0728e6649b764c991357d556"
 
       def install
         bin.install "reminder"
